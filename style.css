@@ -1012,4 +1012,15 @@ button {
         display: block;
     }
 
+    .section1{
+        display: block;
+    }
+
+    .section1Inner>h1{
+        font-size: 2rem;
+    }
+
+    .section1Inner>h3{
+        font-size: 1rem;
+    }
 }
