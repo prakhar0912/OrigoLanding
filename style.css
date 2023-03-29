@@ -432,6 +432,7 @@ button {
 
 .chain>span {
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .glide__slide--active>.chain {
@@ -933,6 +934,21 @@ button {
     }
 }
 
+@media(max-width: 750px) and (min-width: 590px){
+    .person{
+        display: block;
+        text-align: center;
+    }
+
+    .person>div:last-of-type{
+        margin: 15px 0;
+    }
+
+    .loc{
+        margin: 5px auto;
+    }
+}
+
 @media(max-width: 700px) {
 
     .eCash,
@@ -957,28 +973,6 @@ button {
 }
 
 
-@media(max-width: 590px) {
-    .glide__track {
-        width: 80%;
-    }
-
-    .card {
-        width: 80%;
-        margin: 0 auto;
-        padding: 50px 20px;
-    }
-
-    .glide__slide--active>.card {
-        transform: none;
-    }
-
-    .eCash,
-    .eSpot,
-    .eHedge,
-    .eResearch {
-        padding: 60px;
-    }
-}
 
 @media(max-width: 600px){
     .section1Inner>div>button{
@@ -1004,9 +998,73 @@ button {
     }
 }
 
+
+@media(max-width: 590px) {
+    .glide__track {
+        width: 100%;
+    }
+
+    .card {
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+
+    .glide__slide--active>.card {
+        transform: none;
+    }
+
+    .eCash,
+    .eSpot,
+    .eHedge,
+    .eResearch {
+        padding: 60px;
+    }
+
+
+
+}
+
 @media(max-width: 540px){
     .mob-nav{
         min-width: 50vw;
+    }
+
+    .glide__slides{
+        padding: 70px 0;
+    }
+
+}
+
+.glide__bullets{
+    display: none;
+}
+
+@media(max-width: 470px){
+
+    .glide__arrows{
+        display: none;
+    }
+
+    .glide__bullets{
+        display: block;
+    }
+
+    .glide__bullets{
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .glide__bullet{
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        background-color: rgba(117, 117, 117, 0.303);
+        transition: all 0.1s ease;
+    }
+
+    .glide__bullet--active{
+        background-color: #04B23D;
     }
 }
 
@@ -1016,7 +1074,7 @@ button {
         font-size: 0.5rem;
     }
 
-    .glide__arrow--left {
+    /* .glide__arrow--left {
         left: 0;
         transform: translate(0, -50%);
     }
@@ -1025,7 +1083,7 @@ button {
         left: initial;
         right: 0;
         transform: translate(0, -50%);
-    }
+    } */
 
     .aboutLinks>div>h3 {
         font-size: 0.9rem;
