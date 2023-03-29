@@ -151,10 +151,11 @@ button {
 
 .section1Inner>h1 {
     max-width: 90vw;
-    margin: 15px 0;
+    margin: 15px auto;
     font-size: 3rem;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.674);
     font-weight: 200;
+    text-align: center;
 }
 
 .section1Inner>h3 {
@@ -164,6 +165,7 @@ button {
     padding: 0;
     padding-bottom: 50px;
     font-weight: 200;
+    margin: 25px auto;
 }
 
 .section1Inner>div {
