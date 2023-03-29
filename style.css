@@ -811,10 +811,6 @@ button {
         justify-self: right;
     }
 
-    .navOuter {
-        overflow: hidden;
-    }
-
     .hamContainer{
         display: block;
     }
@@ -868,7 +864,7 @@ button {
     }
 
     .mob-nav {
-        position: absolute;
+        position: fixed;
         padding: 50px 0;
         padding-top: 100px;
         left: 100%;
@@ -889,10 +885,6 @@ button {
         margin: 30px 0;
     }
 
-    .navOuter input[type="checkbox"]:checked~.mob-nav {
-        transform: translateX(-100%);
-    }
-
     .navOuter input[type="checkbox"]:checked~.hamburger-lines .line1 {
         transform: rotate(45deg);
     }
@@ -905,7 +897,7 @@ button {
         transform: rotate(-45deg);
     }
 
-    .mob-nav .show{
+    .show{
         transform: translateX(-100%);
     }
 

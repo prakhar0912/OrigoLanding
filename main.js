@@ -46,15 +46,16 @@ new Glide('.glide3', {
     
 }).mount()
 
-let checkbox = document.querySelector("input[name=checkbox]");
+let checkbox = document.querySelector(".checkbox");
 let mobNav = document.querySelector('.mob-nav')
-
+console.log(mobNav)
 checkbox.addEventListener('change', function() {
+    console.log('here')
   if (this.checked) {
-    mobNav.classList.add('.show')
+    mobNav.classList.add('show')
 
   } else {
-    mobNav.classList.remove('.show')
+    mobNav.classList.remove('show')
 
   }
 });
