@@ -45,3 +45,15 @@ new Glide('.glide3', {
     }
     
 }).mount()
+
+let checkbox = document.querySelector("input[name=checkbox]");
+let mobNav = document.querySelector('.mob-nav')
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    console.log("Checkbox is checked..");
+
+  } else {
+    console.log("Checkbox is not checked..");
+  }
+});
