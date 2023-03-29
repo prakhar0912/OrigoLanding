@@ -825,6 +825,9 @@ button {
         z-index: 5;
         opacity: 0;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -webkit-touch-callout: none
     }
 
 
@@ -961,6 +964,15 @@ button {
     .eHedge,
     .eResearch {
         padding: 60px;
+    }
+}
+
+@media(max-width: 600px){
+    .section1Inner>div>button{
+        font-size: 1rem;
+    }
+    .section1Inner>div{
+        width: 90%;
     }
 }
 
