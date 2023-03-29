@@ -903,6 +903,9 @@ button {
         transform: rotate(-45deg);
     }
 
+    .mob-nav .show{
+        transform: translateX(-100%);
+    }
 
 
 }
@@ -917,7 +920,7 @@ button {
         /* display: flex;
         flex-flow: column wrap;
         row-gap: 20px; */
-        padding: 30px 50px;
+        padding: 30px 20px;
     }
 }
 
@@ -992,7 +995,13 @@ button {
         font-size: 0.8rem;
     }
 
+    .aboutApps>div:first-of-type {
+        display: block;
+    }
 
+    .aboutApps>div:first-of-type>span {
+        transform: none;
+    }
 
 }
 
@@ -1001,11 +1010,4 @@ button {
         display: block;
     }
 
-    .aboutApps>div:first-of-type {
-        display: block;
-    }
-
-    .aboutApps>div:first-of-type>span {
-        transform: none;
-    }
 }

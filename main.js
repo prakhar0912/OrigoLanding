@@ -51,9 +51,10 @@ let mobNav = document.querySelector('.mob-nav')
 
 checkbox.addEventListener('change', function() {
   if (this.checked) {
-    console.log("Checkbox is checked..");
+    mobNav.classList.add('.show')
 
   } else {
-    console.log("Checkbox is not checked..");
+    mobNav.classList.remove('.show')
+
   }
 });
