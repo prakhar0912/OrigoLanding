@@ -773,6 +773,7 @@ button {
     .aboutLinks {
         justify-items: center;
         margin-bottom: 50px;
+        text-align: center;
     }
 
     .aboutApps>div:first-of-type {
@@ -973,6 +974,21 @@ button {
     }
     .section1Inner>div{
         width: 90%;
+    }
+
+    .section7Inner{
+        padding: 50px 20px;
+    }
+
+    .aboutApps>div:last-of-type{
+        flex-direction: column;
+    }
+
+    .aboutApps>div:last-of-type>svg{
+        align-self: center;
+        margin-bottom: 15px;
+        height: 22px;
+        width: 26px;
     }
 }
 
