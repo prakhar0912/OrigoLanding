@@ -369,6 +369,11 @@ button {
     box-shadow: 0px 2px 15px rgba(62, 84, 88, 0.075);
 }
 
+.client > img{
+    max-height: 70px;
+    max-width: 70px;
+}
+
 .glide__slide--active>.client {
     transform: scale(1.1);
 }
@@ -441,6 +446,8 @@ button {
 .chain>img {
     border-radius: 10px;
     margin-bottom: 14px;
+    max-height: 95px;
+    max-width: 95px;
 }
 
 .chain>span {
@@ -493,6 +500,11 @@ button {
     align-items: center;
     justify-items: center;
     margin: 10px 30px;
+}
+
+.partner > img{
+    max-width: 90px;
+    max-height: 90px;
 }
 
 /* Section 6 */
@@ -549,6 +561,8 @@ button {
 
 .person>div:first-of-type>img {
     border-radius: 100%;
+    max-height: 75px;
+    max-width: 75px;
 }
 
 .person>div:last-of-type {
