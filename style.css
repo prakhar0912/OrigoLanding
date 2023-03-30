@@ -79,7 +79,9 @@ button {
 
 .navInner>button {
     justify-self: center;
-    padding: 12px 20px;
+    padding: 14px 22px;
+    font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
 }
 
 .nav-links {
@@ -90,8 +92,7 @@ button {
     grid-template-columns: repeat(6, auto);
     align-items: center;
     justify-items: center;
-    font-size: 1.1rem;
-
+    font-size: 16px;
 }
 
 .nav-links>a {
@@ -101,21 +102,21 @@ button {
     padding: 0 10px;
 }
 
-.nav-links>a:last-of-type{
+.nav-links>a:last-of-type {
     display: grid;
     grid-template-columns: auto auto;
     justify-items: center;
     align-items: center;
 }
 
-.mob-nav > a:last-of-type{
+.mob-nav>a:last-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.mob-nav>a:last-of-type>span{
+.mob-nav>a:last-of-type>span {
     padding-left: 8px;
 }
 
@@ -163,19 +164,19 @@ button {
 .section1Inner>h1 {
     max-width: 90vw;
     margin: 15px auto;
-    font-size: 3rem;
+    font-size: 44px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.674);
-    font-weight: 200;
+    font-weight: 500;
     text-align: center;
 }
 
 .section1Inner>h3 {
     text-align: center;
     max-width: 90vw;
-    font-size: 1.3rem;
+    font-size: 20px;
     padding: 0;
     padding-bottom: 50px;
-    font-weight: 200;
+    font-weight: 500;
     margin: 25px auto;
 }
 
@@ -192,7 +193,7 @@ button {
     height: 100%;
     border-radius: 8px 0 0 8px;
     border: none;
-    font-size: 1.2rem;
+    font-size: 18px;
     padding: 0 10px;
     font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
@@ -211,8 +212,10 @@ button {
 
 .section1Inner>div>button {
     padding: 16px 24px;
-    font-size: 1.3rem;
+    font-size: 24px;
     border-radius: 0 8px 8px 0;
+    font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
 }
 
 
@@ -243,10 +246,11 @@ button {
 .eHedge {
     position: relative;
     padding: 60px 0;
-    padding-right: 100px;
+    padding-right: 60px;
     display: grid;
     grid-template-columns: 100%;
     justify-items: right;
+    padding-left: 18vw;
 }
 
 .eResearch,
@@ -256,7 +260,8 @@ button {
     display: grid;
     grid-template-columns: 100%;
     justify-items: left;
-    padding-left: 100px;
+    padding-left: 60px;
+    padding-right: 18vw;
 }
 
 .eCash,
@@ -273,6 +278,8 @@ button {
 .eContent>div:first-of-type>p {
     margin: 0;
     margin-left: 8px;
+    font-size: 12px;
+    color: #757575;
 }
 
 .dent {
@@ -287,18 +294,17 @@ button {
     position: relative;
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
 }
 
-.eCash .eGrid>div:first-of-type,
-.eHedge .eGrid>div:first-of-type {
-    padding-right: 100px;
+.eContent {
+    position: relative;
+    width: 100%;
 }
 
-.eResearch .eGrid>div:first-of-type,
-.eSpot .eGrid>div:first-of-type {
-    padding-right: 100px;
-
+.eGrid h1{
+    margin: 22px 0;
+    font-size: 1.8rem;
 }
 
 .eGrid>div:last-of-type>button {
@@ -322,6 +328,11 @@ button {
     margin-right: 3px;
 }
 
+.eGrid p {
+    max-width: 70%;
+    color: #2F2F2F;
+}
+
 
 /* Section 3 */
 
@@ -340,6 +351,7 @@ button {
     text-align: center;
     color: #2F2F2F;
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 .client {
@@ -413,6 +425,7 @@ button {
     text-align: center;
     color: rgba(47, 47, 47, 1);
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 .chain {
@@ -456,6 +469,7 @@ button {
     text-align: center;
     color: rgba(47, 47, 47, 1);
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 .partnersGrid {
@@ -498,6 +512,7 @@ button {
     text-align: center;
     color: black;
     margin-bottom: 60px;
+    font-size: 32px;
 }
 
 .section6Inner>h1>span {
@@ -566,6 +581,14 @@ button {
 
 .glide__slide--active>.card {
     transform: scale(1.1);
+}
+
+.glide__slide:not(.glide__slide--active) span:first-of-type{
+    color: #757575;
+}
+
+.glide__slide:not(.glide__slide--active) p:first-of-type{
+    color: #757575;
 }
 
 .glide3 .glide__arrow {
@@ -678,8 +701,8 @@ button {
 }
 
 .footerUpper>div:last-of-type>h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 24px;
     margin: 30px 0;
     margin-top: 0;
 }
@@ -718,6 +741,20 @@ button {
     border-radius: 0 8px 8px 0;
 }
 
+@media(max-width: 1533px){
+    .chain>span {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+
+@media(max-width: 1319px) and (min-width: 1232px){
+    .chain>span {
+        font-size: 1.0rem;
+        text-align: center;
+    }
+}
 
 
 
@@ -725,6 +762,12 @@ button {
     .section2Inner {
         display: block;
     }
+
+
+    .eGrid p {
+        max-width: 90%;
+    }
+
 
     .eHedge {
         background-color: rgba(253, 233, 108, 0.15);
@@ -734,11 +777,19 @@ button {
         background-color: white;
     }
 
-    .section7Inner{
+    .section7Inner {
         padding: 50px 70px;
     }
 
 }
+
+@media(max-width: 1048px) and (min-width: 1000px){
+    .chain>span {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 
 @media(max-width: 1025px) {
     .nav-links>a {
@@ -824,7 +875,7 @@ button {
         justify-self: right;
     }
 
-    .hamContainer{
+    .hamContainer {
         display: block;
     }
 
@@ -862,7 +913,7 @@ button {
         height: 4px;
         width: 100%;
         border-radius: 10px;
-        background: #0e2431;
+        background: #04B23D;
     }
 
     .hamburger-lines .line1 {
@@ -881,21 +932,20 @@ button {
 
     .mob-nav {
         position: fixed;
-        padding: 50px 0;
+        padding: 80px 0;
         padding-top: 100px;
         left: 100%;
+        display: block;
         transform: translate(0);
-        display: flex;
-        flex-direction: column;
         transition: transform 0.5s ease-in-out;
         text-align: center;
         background-color: #2F2F2F;
         min-width: 40vw;
         max-width: 90vw;
-        max-height: 90vh;
     }
 
     .mob-nav>a {
+        display: block;
         color: white;
         text-decoration: none;
         margin: 30px 0;
@@ -913,38 +963,62 @@ button {
         transform: rotate(-45deg);
     }
 
-    .show{
+    .show {
         transform: translateX(-100%);
     }
 
 
 }
 
+@media(max-width: 903px) and (max-height: 490px) {
+    .mob-nav {
+        padding: 20px;
+    }
+}
 
-@media(max-width: 800px) {
-    .navOuter {
-        /* position: relative; */
+
+@media(max-width: 903px) and (max-height: 355px) {
+    .mob-nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 40px;
+        width: 100vw;
+        max-width: 100vw;
     }
 
+    .mob-nav>a {
+        margin: 0;
+    }
+}
+
+
+
+@media(max-width: 800px) {
     .navInner {
-        /* display: flex;
-        flex-flow: column wrap;
-        row-gap: 20px; */
         padding: 30px 20px;
     }
 }
 
-@media(max-width: 750px) and (min-width: 590px){
-    .person{
+
+
+
+@media(max-width: 750px) and (min-width: 590px) {
+    .person {
         display: block;
         text-align: center;
+        width: fit-content;
+        margin: 0 auto;
     }
 
-    .person>div:last-of-type{
+    .person>div:last-of-type {
         margin: 15px 0;
     }
 
-    .loc{
+    .card{
+        padding: 50px 30px;
+    }
+
+    .loc {
         margin: 5px auto;
     }
 }
@@ -972,25 +1046,34 @@ button {
 
 }
 
+@media(max-width: 775px) and (min-width: 470px){
+    .chain>span {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
 
 
-@media(max-width: 600px){
-    .section1Inner>div>button{
+
+
+@media(max-width: 600px) {
+    .section1Inner>div>button {
         font-size: 1rem;
     }
-    .section1Inner>div{
+
+    .section1Inner>div {
         width: 90%;
     }
 
-    .section7Inner{
+    .section7Inner {
         padding: 50px 20px;
     }
 
-    .aboutApps>div:last-of-type{
+    .aboutApps>div:last-of-type {
         flex-direction: column;
     }
 
-    .aboutApps>div:last-of-type>svg{
+    .aboutApps>div:last-of-type>svg {
         align-self: center;
         margin-bottom: 15px;
         height: 22px;
@@ -1025,37 +1108,53 @@ button {
 
 }
 
-@media(max-width: 540px){
-    .mob-nav{
+
+@media(max-width: 645px) and (min-width: 580px){
+    .chain>span {
+        font-size: 0.80rem;
+        text-align: center;
+    }
+}
+
+
+@media(max-width: 540px) {
+    .mob-nav {
         min-width: 50vw;
     }
 
-    .glide__slides{
+    .glide__slides {
         padding: 70px 0;
     }
 
 }
 
-.glide__bullets{
+.glide__bullets {
     display: none;
 }
 
-@media(max-width: 470px){
+@media(max-width: 497px) and (min-width: 470px){
+    .chain>span {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
 
-    .glide__arrows{
+@media(max-width: 470px) {
+
+    .glide__arrows {
         display: none;
     }
 
-    .glide__bullets{
+    .glide__bullets {
         display: block;
     }
 
-    .glide__bullets{
+    .glide__bullets {
         margin: 0 auto;
         width: fit-content;
     }
 
-    .glide__bullet{
+    .glide__bullet {
         height: 15px;
         width: 15px;
         border-radius: 100%;
@@ -1063,7 +1162,7 @@ button {
         transition: all 0.1s ease;
     }
 
-    .glide__bullet--active{
+    .glide__bullet--active {
         background-color: #04B23D;
     }
 }
@@ -1101,6 +1200,10 @@ button {
         transform: none;
     }
 
+    .eCash, .eSpot, .eHedge, .eResearch{
+        padding: 60px 30px;
+    }
+
 }
 
 @media(max-width: 390px) {
@@ -1108,15 +1211,15 @@ button {
         display: block;
     }
 
-    .section1{
+    .section1 {
         display: block;
     }
 
-    .section1Inner>h1{
+    .section1Inner>h1 {
         font-size: 2rem;
     }
 
-    .section1Inner>h3{
+    .section1Inner>h3 {
         font-size: 1rem;
     }
 }

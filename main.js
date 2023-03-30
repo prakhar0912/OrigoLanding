@@ -22,6 +22,9 @@ new Glide('.glide2', {
     focusAt: 'center',
     gap: 20,
     breakpoints: {
+        1232:{
+            perView: 4
+        },
         1000: {
             perView: 3
         },
