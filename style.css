@@ -671,7 +671,22 @@ button {
 }
 
 .aboutApps>div:first-of-type>img {
-    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.aboutApps>div:first-of-type>img:first-of-type{
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.aboutApps>div:first-of-type>img:nth-of-type(2){
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.aboutApps>div:first-of-type>img:last-of-type{
+    max-width: 150px;
+    max-height: 150px;
 }
 
 .aboutApps>div:first-of-type>span {
