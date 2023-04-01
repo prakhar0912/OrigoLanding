@@ -34,3 +34,19 @@ comMobBtn.addEventListener('click', () => {
   }
   index+=1
 })
+
+let overlay = document.querySelector('.loginOverlay')
+let regBtn = document.querySelectorAll('.register')
+let cross = document.querySelector('.loginRight > svg')
+
+regBtn.forEach((ele) => {
+  ele.addEventListener('click', () => {
+    overlay.classList.add('loginDisplay')
+  })
+})
+
+cross.addEventListener('click', () => {
+  overlay.classList.remove('loginDisplay')
+})
+
+
