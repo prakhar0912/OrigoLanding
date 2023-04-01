@@ -95,19 +95,30 @@ button {
     font-size: 16px;
 }
 
-.nav-links>a, .nav-links > div{
+.nav-links>a,
+.nav-links>div {
     color: rgba(47, 47, 47, 1);
     text-decoration: none;
     cursor: pointer;
     padding: 0 10px;
 }
 
-.mob-nav > div{
+.nav-links>a {
+    transition: color 0.3s ease;
+}
+
+.nav-links>a:hover,
+.nav-links>div:hover {
+    color: #04B23D;
+}
+
+
+.mob-nav>div {
     position: relative;
     transition: all 0.5s ease;
 }
 
-.mob-nav > div > div{
+.mob-nav>div>div {
     height: 0;
     overflow: hidden;
     background-color: transparent;
@@ -115,47 +126,53 @@ button {
     transition: all 0.5s ease;
 }
 
-.mobOpen > div{
+.mobOpen>div {
     height: 70px !important;
 }
 
-.nav-links > div{
+.nav-links>div {
     position: relative;
     transition: all 0.5s ease;
 }
 
-.nav-links > div > div{
+.nav-links>div>div {
     position: absolute;
     height: 0;
     overflow: hidden;
     background-color: transparent;
     text-align: center;
     width: 100%;
-    
+
 }
 
-.nav-links > div > div > div{
+.nav-links>div>div>div {
     background-color: white;
     margin-top: 20px;
     height: auto;
     width: 100%;
     box-shadow: 0px 2px 15px rgba(62, 84, 88, 0.075);
     border-radius: 8px;
+    transition: color 0.3s ease;
+    color: rgba(47, 47, 47, 1);
 }
 
 
-.nav-links > div > div > div > div:first-of-type{
+.nav-links>div>div>div>div:first-of-type {
     border: 1px solid #ECECEC;
     width: 70%;
     margin: 0 auto;
 }
 
-.nav-links > div > div > div > p{
+.nav-links>div>div>div>p {
     margin: 0;
     padding: 15px 0;
 }
 
-.open > div{
+.nav-links>div>div>div>p:hover{
+    color: #04B23D;
+}
+
+.open>div {
     height: 150px !important;
 }
 
@@ -361,7 +378,7 @@ button {
     width: 100%;
 }
 
-.eGrid h1{
+.eGrid h1 {
     margin: 22px 0;
     font-size: 1.8rem;
 }
@@ -428,7 +445,7 @@ button {
     box-shadow: 0px 2px 15px rgba(62, 84, 88, 0.075);
 }
 
-.client > img{
+.client>img {
     max-height: 70px;
     max-width: 70px;
 }
@@ -561,7 +578,7 @@ button {
     margin: 10px 30px;
 }
 
-.partner > img{
+.partner>img {
     max-width: 90px;
     max-height: 90px;
 }
@@ -656,11 +673,11 @@ button {
     transform: scale(1.1);
 }
 
-.glide__slide:not(.glide__slide--active) span:first-of-type{
+.glide__slide:not(.glide__slide--active) span:first-of-type {
     color: #757575;
 }
 
-.glide__slide:not(.glide__slide--active) p:first-of-type{
+.glide__slide:not(.glide__slide--active) p:first-of-type {
     color: #757575;
 }
 
@@ -733,17 +750,17 @@ button {
     margin: 0 10px;
 }
 
-.aboutApps>div:first-of-type>img:first-of-type{
+.aboutApps>div:first-of-type>img:first-of-type {
     max-width: 32px;
     max-height: 32px;
 }
 
-.aboutApps>div:first-of-type>img:nth-of-type(2){
+.aboutApps>div:first-of-type>img:nth-of-type(2) {
     max-width: 32px;
     max-height: 32px;
 }
 
-.aboutApps>div:first-of-type>img:last-of-type{
+.aboutApps>div:first-of-type>img:last-of-type {
     max-width: 150px;
     max-height: 150px;
 }
@@ -829,7 +846,7 @@ button {
     border-radius: 0 8px 8px 0;
 }
 
-@media(max-width: 1533px){
+@media(max-width: 1533px) {
     .chain>span {
         font-size: 1.1rem;
         text-align: center;
@@ -837,7 +854,7 @@ button {
 }
 
 
-@media(max-width: 1319px) and (min-width: 1232px){
+@media(max-width: 1319px) and (min-width: 1232px) {
     .chain>span {
         font-size: 1.0rem;
         text-align: center;
@@ -871,7 +888,7 @@ button {
 
 }
 
-@media(max-width: 1048px) and (min-width: 1000px){
+@media(max-width: 1048px) and (min-width: 1000px) {
     .chain>span {
         font-size: 1rem;
         text-align: center;
@@ -880,14 +897,18 @@ button {
 
 
 @media(max-width: 1025px) {
-    .nav-links>a, .nav-links > div {
+
+    .nav-links>a,
+    .nav-links>div {
         font-size: 1rem;
     }
 }
 
 
 @media(max-width: 990px) {
-    .nav-links>a, .nav-links > div {
+
+    .nav-links>a,
+    .nav-links>div {
         font-size: 0.8rem;
     }
 
@@ -1032,7 +1053,8 @@ button {
         max-width: 90vw;
     }
 
-    .mob-nav>a, .mob-nav > div {
+    .mob-nav>a,
+    .mob-nav>div {
         display: block;
         color: white;
         text-decoration: none;
@@ -1074,7 +1096,8 @@ button {
         max-width: 100vw;
     }
 
-    .mob-nav>a,.mob-nav > div {
+    .mob-nav>a,
+    .mob-nav>div {
         margin: 0;
     }
 }
@@ -1102,7 +1125,7 @@ button {
         margin: 15px 0;
     }
 
-    .card{
+    .card {
         padding: 50px 30px;
     }
 
@@ -1134,7 +1157,7 @@ button {
 
 }
 
-@media(max-width: 775px) and (min-width: 470px){
+@media(max-width: 775px) and (min-width: 470px) {
     .chain>span {
         font-size: 0.9rem;
         text-align: center;
@@ -1197,7 +1220,7 @@ button {
 }
 
 
-@media(max-width: 645px) and (min-width: 580px){
+@media(max-width: 645px) and (min-width: 580px) {
     .chain>span {
         font-size: 0.80rem;
         text-align: center;
@@ -1220,7 +1243,7 @@ button {
     display: none;
 }
 
-@media(max-width: 497px) and (min-width: 470px){
+@media(max-width: 497px) and (min-width: 470px) {
     .chain>span {
         font-size: 0.8rem;
         text-align: center;
@@ -1257,7 +1280,9 @@ button {
 
 
 @media(max-width: 450px) {
-    .nav-links>a, .nav-links > div {
+
+    .nav-links>a,
+    .nav-links>div {
         font-size: 0.5rem;
     }
 
@@ -1288,7 +1313,10 @@ button {
         transform: none;
     }
 
-    .eCash, .eSpot, .eHedge, .eResearch{
+    .eCash,
+    .eSpot,
+    .eHedge,
+    .eResearch {
         padding: 60px 30px;
     }
 
