@@ -103,6 +103,23 @@ button {
     padding: 0 10px;
 }
 
+.mob-nav>div {
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.mob-nav>div>div {
+    height: 0;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.mobOpen>div {
+    height: 70px !important;
+}
+
 .nav-links>div {
     position: relative;
     transition: all 0.5s ease;
@@ -318,6 +335,10 @@ button {
     font-size: 18px;
 }
 
+.comingSoonLeft>div:not(.dentContainer)>span:last-of-type {
+    max-width: 90%;
+}
+
 .comingSoonLeft>p:first-of-type {
     font-size: 14px;
     color: #2F2F2F;
@@ -334,7 +355,7 @@ button {
     position: relative;
     width: 100%;
     margin: 40px 0;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .comingSoonLeft>div:last-of-type>button {
@@ -419,21 +440,21 @@ button {
     font-size: 16px;
 }
 
-.formContainer > input:focus{
+.formContainer>input:focus {
     outline: none;
 }
 
-.formContainer input::placeholder{
+.formContainer input::placeholder {
     font-size: 16px;
     color: #979797;
 }
 
-.formContainer input:-ms-input-placeholder{
+.formContainer input:-ms-input-placeholder {
     font-size: 16px;
     color: #979797;
 }
 
-.formContainer > div:first-of-type{
+.formContainer>div:first-of-type {
     padding: 16px 24px;
     border: 1px solid #D3D3D3;
     border-radius: 8px;
@@ -444,12 +465,12 @@ button {
     justify-content: flex-start;
 }
 
-.formContainer > div:first-of-type > span{
+.formContainer>div:first-of-type>span {
     padding-right: 10px;
     border-right: 1px #979797 solid;
 }
 
-.formContainer > div:first-of-type > input{
+.formContainer>div:first-of-type>input {
     border: none;
     font-size: 16px;
     outline: none;
@@ -457,7 +478,7 @@ button {
     padding-left: 10px;
 }
 
-.formContainer > select{
+.formContainer>select {
     padding: 16px 24px;
     outline: none;
     border: 1px solid #D3D3D3;
@@ -467,7 +488,7 @@ button {
     font-size: 16px;
 }
 
-.formContainer > button{
+.formContainer>button {
     width: 100%;
     padding: 12px 16px;
     font-weight: 100;
@@ -657,8 +678,8 @@ button {
 
 }
 
-@media(max-width: 1100px){
-    .eCashLeft{
+@media(max-width: 1100px) {
+    .eCashLeft {
         padding-left: 0;
     }
 }
@@ -732,12 +753,12 @@ button {
     display: none;
 }
 
-@media(max-width: 950px){
-    .comingSoonContainer{
+@media(max-width: 950px) {
+    .comingSoonContainer {
         display: block;
     }
 
-    .comingSoonLeft>div:last-of-type{
+    .comingSoonLeft>div:last-of-type {
         width: fit-content;
     }
 }
@@ -908,12 +929,12 @@ button {
     }
 
 
-   
+
 
 }
 
-@media(max-width: 625px){
-    .launchingSoon>h2{
+@media(max-width: 625px) {
+    .launchingSoon>h2 {
         font-size: 20px;
     }
 }
@@ -937,8 +958,8 @@ button {
     }
 }
 
-@media(max-width: 586px){
-    .launchingSoon>h2{
+@media(max-width: 586px) {
+    .launchingSoon>h2 {
         font-size: 18px;
     }
 }
@@ -951,15 +972,15 @@ button {
 
 @media(max-width: 450px) {
 
-    .comingSoonLeft>div:last-of-type{
+    .comingSoonLeft>div:last-of-type {
         display: block;
     }
 
-    .comingSoonLeft>div:last-of-type > button{
+    .comingSoonLeft>div:last-of-type>button {
         margin-bottom: 16px;
     }
 
-    .comingSoonLeft>div:last-of-type > button:last-of-type{
+    .comingSoonLeft>div:last-of-type>button:last-of-type {
         margin-bottom: 36px;
     }
 
