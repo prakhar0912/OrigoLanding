@@ -439,6 +439,9 @@ button {
     border-radius: 8px;
     font-size: 16px;
     color: #979797;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .formContainer > div:first-of-type > span{
@@ -450,6 +453,8 @@ button {
     border: none;
     font-size: 16px;
     outline: none;
+    width: 100%;
+    padding-left: 10px;
 }
 
 .formContainer > select{
