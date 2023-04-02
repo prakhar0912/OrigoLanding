@@ -197,6 +197,7 @@ button {
 
 .nav-links>a:last-of-type>span {
     padding-left: 8px;
+    font-weight: 600;
 }
 
 .active {
@@ -322,6 +323,8 @@ button {
     font-size: 18px;
     width: 100%;
     padding: 16px 0;
+    font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
 }
 
 .numberContainer>p:last-of-type {
@@ -974,6 +977,8 @@ button {
     padding: 15px 24px;
     font-size: 1.1rem;
     border-radius: 0 8px 8px 0;
+    font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 400;
 }
 
 @media(max-width: 1533px) {
@@ -1219,6 +1224,8 @@ button {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 400;
     }
 
     .mob-nav>a,
