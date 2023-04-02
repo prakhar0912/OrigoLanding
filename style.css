@@ -1238,8 +1238,10 @@ button {
     }
 
     .mob-nav>button {
-        padding: 12px 20px;
+        padding: 12px 24px;
         height: max-content;
+        font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 400;
     }
 
 
