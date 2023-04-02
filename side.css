@@ -650,6 +650,46 @@ button {
 
 
 
+/* About Us */
+
+
+.aboutUs .section1 {
+    position: relative;
+    display: block;
+    padding: 80px 10vw;
+    padding-bottom: 150px;
+}
+
+.aboutUs .section1Inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: flex-start;
+}
+
+.aboutUsLeft {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 50px;
+}
+
+.aboutUsLeft > p{
+    margin-bottom: 50px;
+}
+
+.aboutUsRight {
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.aboutUsRight>img {
+    padding-left: 50px;
+    width: 100%;
+    max-width: 45vw;
+    margin: 0 0 20px auto;
+    display: block;
+}
 
 
 
@@ -830,6 +870,29 @@ button {
     }
 }
 
+@media(max-width: 1461px){
+    .aboutUsLeft{
+        font-size: 18px;
+    }
+
+    .aboutUsLeft > p{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media(max-width: 1327px){
+    .aboutUsLeft{
+        font-size: 16px;
+    }
+
+    .aboutUsLeft > p{
+        margin-bottom: 10px;
+    }
+}
+
+
+
 @media(max-width: 1237px) {
     .loginContainer {
         margin: 160px 15vw;
@@ -845,6 +908,22 @@ button {
         padding: 50px 70px;
     }
 
+}
+
+@media(max-width: 1177px){
+    .aboutUsLeft{
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .aboutUsLeft > p{
+        margin-bottom: 10px;
+    }
+
+    .aboutUsRight>img{
+        margin: 10px 0;
+        padding-left: 25px;
+    }
 }
 
 @media(max-width: 1100px) {
@@ -876,6 +955,11 @@ button {
     .loginLeft>p:first-of-type {
         margin-top: 30px;
     }
+
+    .aboutUsLeft{
+        font-size: 14px;
+    }
+
 }
 
 
@@ -1085,6 +1169,25 @@ button {
         transform: translateX(-100%);
     }
 
+
+    .aboutUs .section1Inner{
+        display: block;
+    }
+
+    .aboutUsLeft {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .aboutUsRight>img{
+        max-width: initial;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
 }
 
 @media(max-width: 903px) and (max-height: 631px) {
@@ -1271,8 +1374,8 @@ button {
 }
 
 
-@media(max-width: 665px) and (min-width:444px) and (min-height: 570px){
-    .loginContainer{
+@media(max-width: 665px) and (min-width:444px) and (min-height: 570px) {
+    .loginContainer {
         margin: 50px 10vw;
     }
 }
