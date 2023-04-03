@@ -936,6 +936,18 @@ button {
     margin: 20px 0;
     color: #D3D3D3;
     font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aboutLinks>div>a:hover{
+    color:#04B23D;
+}
+
+.cgp {
+    max-width: 80%;
+    /* margin: 20px auto !important; */
+    text-decoration: none;
 }
 
 .footerUpper>div:last-of-type>h1 {
@@ -1128,6 +1140,12 @@ button {
     .aboutApps>div:last-of-type {
         text-align: center;
         justify-content: center;
+    }
+
+    .cgp {
+        max-width: 80%;
+        margin: 20px auto !important;
+        text-decoration: none;
     }
 }
 

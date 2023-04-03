@@ -544,7 +544,7 @@ button {
     color: #2F2F2F;
     font-size: 18px;
     font-weight: 500;
-    padding: 0 36px;
+    padding: 0 50px;
 
 }
 
@@ -552,7 +552,7 @@ button {
     color: #04B23D;
     font-size: 18px;
     font-weight: 500;
-    padding: 0 36px;
+    padding: 0 50px;
 
 }
 
@@ -563,7 +563,7 @@ button {
 
 .comingSoonRight>div:nth-of-type(2) {
     position: relative;
-    padding: 0 36px;
+    padding: 0 50px;
 }
 
 .formContainer>p {
@@ -674,7 +674,7 @@ button {
     padding: 0 50px;
 }
 
-.aboutUsLeft > p{
+.aboutUsLeft>p {
     margin-bottom: 50px;
 }
 
@@ -691,6 +691,91 @@ button {
     display: block;
 }
 
+/* Policy */
+
+
+.policy .section1 {
+    position: relative;
+    display: block;
+    padding: 80px 10vw;
+    padding-bottom: 150px;
+}
+
+.policy .section1Inner {
+    position: relative;
+    display: block;
+}
+
+.policy h1 {
+    text-align: center;
+    margin: 70px 0;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #464646;
+}
+
+.downloadsContainer {
+    position: relative;
+    border: 1px solid #F2F2F2;
+}
+
+.file {
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr auto auto auto;
+    align-items: center;
+    justify-items: center;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 20px 10px;
+}
+
+.file>div {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.file>svg {
+    margin: 0 20px;
+    min-width: 24px;
+}
+
+.file>div:first-of-type {
+    justify-self: left;
+}
+
+.file>div:first-of-type>svg {
+    min-width: 18px;
+
+}
+
+.file>div:nth-of-type(2)>svg {
+    min-width: 16px;
+
+}
+
+.file>div:nth-of-type(3)>svg {
+    min-width: 20px;
+
+}
+
+.file>div>svg {
+    margin-right: 10px;
+}
+
+
+.file>div>span {
+    font-weight: 500;
+    font-size: 16px;
+    color: #757575;
+    transform: translateY(2px);
+}
+
+
+.file>div:first-of-type>span {
+    color: #2F2F2F;
+}
 
 
 
@@ -817,6 +902,18 @@ button {
     margin: 20px 0;
     color: #D3D3D3;
     font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aboutLinks>div>a:hover{
+    color:#04B23D;
+}
+
+.cgp {
+    max-width: 80%;
+    /* margin: 20px auto !important; */
+    text-decoration: none;
 }
 
 .footerUpper>div:last-of-type>h1 {
@@ -870,23 +967,23 @@ button {
     }
 }
 
-@media(max-width: 1461px){
-    .aboutUsLeft{
+@media(max-width: 1461px) {
+    .aboutUsLeft {
         font-size: 18px;
     }
 
-    .aboutUsLeft > p{
+    .aboutUsLeft>p {
         margin-bottom: 10px;
     }
 
 }
 
-@media(max-width: 1327px){
-    .aboutUsLeft{
+@media(max-width: 1327px) {
+    .aboutUsLeft {
         font-size: 16px;
     }
 
-    .aboutUsLeft > p{
+    .aboutUsLeft>p {
         margin-bottom: 10px;
     }
 }
@@ -910,17 +1007,17 @@ button {
 
 }
 
-@media(max-width: 1177px){
-    .aboutUsLeft{
+@media(max-width: 1177px) {
+    .aboutUsLeft {
         padding: 0 20px;
         font-size: 16px;
     }
 
-    .aboutUsLeft > p{
+    .aboutUsLeft>p {
         margin-bottom: 10px;
     }
 
-    .aboutUsRight>img{
+    .aboutUsRight>img {
         margin: 10px 0;
         padding-left: 25px;
     }
@@ -956,7 +1053,7 @@ button {
         margin-top: 30px;
     }
 
-    .aboutUsLeft{
+    .aboutUsLeft {
         font-size: 14px;
     }
 
@@ -1022,6 +1119,14 @@ button {
         text-align: center;
         justify-content: center;
     }
+
+
+    .cgp {
+        max-width: 80%;
+        margin: 20px auto !important;
+        text-decoration: none;
+    }
+
 }
 
 .hamContainer {
@@ -1169,7 +1274,7 @@ button {
     }
 
 
-    .aboutUs .section1Inner{
+    .aboutUs .section1Inner {
         display: block;
     }
 
@@ -1180,7 +1285,7 @@ button {
         margin-bottom: 30px;
     }
 
-    .aboutUsRight>img{
+    .aboutUsRight>img {
         max-width: initial;
         padding: 0;
         margin: 0;
@@ -1247,6 +1352,32 @@ button {
     }
 }
 
+@media(max-width: 750px) {
+    .file {
+        grid-template-areas: "a d" "b d" "c d";
+        justify-items: left;
+    }
+
+    .file>div {
+        margin: 10px;
+    }
+
+    .file>div:nth-of-type(1) {
+        grid-area: a;
+    }
+
+    .file>div:nth-of-type(2) {
+        grid-area: b;
+    }
+
+    .file>div:nth-of-type(3) {
+        grid-area: c;
+    }
+
+    .file>svg {
+        grid-area: d;
+    }
+}
 
 @media(max-width: 700px) {
 
@@ -1432,6 +1563,17 @@ button {
 @media(max-width: 345px) and (min-height: 496px) {
     .mob-nav {
         width: 100vw;
+    }
+}
+
+@media(max-width: 360px) {
+    .file {
+        grid-template-areas: "a" "b" "c" "d";
+        justify-items: left;
+    }
+
+    .file>svg {
+        margin: 10px 30px;
     }
 }
 
