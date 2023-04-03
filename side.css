@@ -1559,6 +1559,33 @@ button {
         transform: none;
     }
 
+    .aboutApps>div:first-of-type {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-areas: "a a a" "b c d";
+        justify-items: flex-start;
+        align-items: start;
+    }
+
+
+    .aboutApps>div:first-of-type>span {
+        transform: none;
+        grid-area: a;
+        margin-bottom: 20px;
+    }
+
+    .aboutApps>div:first-of-type>img:nth-of-type(1){
+        grid-area: b;
+    }
+
+    .aboutApps>div:first-of-type>img:nth-of-type(2){
+        grid-area: c;
+    }
+
+    .aboutApps>div:first-of-type>img:nth-of-type(3){
+        grid-area: d;
+    }
+
 }
 
 @media(max-width: 345px) and (min-height: 496px) {
@@ -1616,6 +1643,18 @@ button {
 
     .aboutLinks>div {
         margin-bottom: 30px;
+    }
+
+    .aboutApps>div:first-of-type {
+        display: grid;
+        
+        grid-template-areas: "a" "b" "c" "d";
+        justify-items: center;
+        align-items: start;
+    }
+
+    .aboutApps>div:first-of-type>span, .aboutApps>div:first-of-type>img{
+        margin: 10px;
     }
 
 }

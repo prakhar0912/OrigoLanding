@@ -415,7 +415,32 @@ button {
     color: #B6B6B6;
 }
 
-.section1Inner>div>input::-ms-input-placeholder {
+.section1Inner>div>input:-ms-input-placeholder {
+    text-align: center;
+    color: #B6B6B6;
+}
+
+.section1Inner>div>input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    text-align: center;
+    color: #B6B6B6;
+
+}
+
+.section1Inner>div>input::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+    color: #B6B6B6;
+}
+
+.section1Inner>div>input:-ms-input-placeholder {
+    /* IE 10+ */
+    text-align: center;
+    color: #B6B6B6;
+}
+
+.section1Inner>div>input:-moz-placeholder {
+    /* Firefox 18- */
     text-align: center;
     color: #B6B6B6;
 }
@@ -941,8 +966,8 @@ button {
     cursor: pointer;
 }
 
-.aboutLinks>div>a:hover{
-    color:#04B23D;
+.aboutLinks>div>a:hover {
+    color: #04B23D;
 }
 
 .cgp {
@@ -981,7 +1006,32 @@ button {
     color: #757575;
 }
 
-.footerUpper>div:last-of-type>div>input::-ms-input-placeholder {
+.footerUpper>div:last-of-type>div>input:-ms-input-placeholder {
+    text-align: center;
+    color: #757575;
+}
+
+.footerUpper>div:last-of-type>div>input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    text-align: center;
+    color: #757575;
+
+}
+
+.footerUpper>div:last-of-type>div>input::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+    color: #757575;
+}
+
+.footerUpper>div:last-of-type>div>input:-ms-input-placeholder {
+    /* IE 10+ */
+    text-align: center;
+    color: #757575;
+}
+
+.footerUpper>div:last-of-type>div>input:-moz-placeholder {
+    /* Firefox 18- */
     text-align: center;
     color: #757575;
 }
@@ -1229,7 +1279,7 @@ button {
     .mob-nav {
         position: fixed;
         padding: 120px 0;
-        left: 100%; 
+        left: 100%;
         display: block;
         transform: translate(0);
         transition: transform 0.5s ease-in-out;
@@ -1468,6 +1518,12 @@ button {
     }
 }
 
+@media(max-width: 625px) {
+    .section1Inner>div>button {
+        font-size: 1rem;
+    }
+}
+
 @media(max-width: 600px) {
     .section1Inner>div>button {
         font-size: 1rem;
@@ -1530,7 +1586,9 @@ button {
         padding: 60px;
     }
 
-
+    .section1Inner>div>input {
+        font-size: 16px;
+    }
 
 }
 
@@ -1591,6 +1649,10 @@ button {
     .glide__bullet--active {
         background-color: #04B23D;
     }
+
+    .section1Inner>div>input {
+        font-size: 14px;
+    }
 }
 
 
@@ -1610,11 +1672,30 @@ button {
     }
 
     .aboutApps>div:first-of-type {
-        display: block;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-areas: "a a a" "b c d";
+        justify-items: flex-start;
+        align-items: start;
     }
+
 
     .aboutApps>div:first-of-type>span {
         transform: none;
+        grid-area: a;
+        margin-bottom: 20px;
+    }
+
+    .aboutApps>div:first-of-type>img:nth-of-type(1){
+        grid-area: b;
+    }
+
+    .aboutApps>div:first-of-type>img:nth-of-type(2){
+        grid-area: c;
+    }
+
+    .aboutApps>div:first-of-type>img:nth-of-type(3){
+        grid-area: d;
     }
 
     .eCash,
@@ -1641,6 +1722,37 @@ button {
 
     .section1Inner>h3 {
         font-size: 1rem;
+    }
+}
+
+@media(max-width: 356px){
+    .section1Inner>div>input::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        white-space: pre-line;
+        position: relative;
+        transform: translateY(-20%);
+
+    }
+
+    .section1Inner>div>input::-moz-placeholder {
+        /* Firefox 19+ */
+        white-space: pre-line;
+        position: relative;
+        transform: translateY(-20%);
+    }
+
+    .section1Inner>div>input:-ms-input-placeholder {
+        /* IE 10+ */
+        white-space: pre-line;
+        position: relative;
+        transform: translateY(-20%);
+    }
+
+    .section1Inner>div>input:-moz-placeholder {
+        /* Firefox 18- */
+        white-space: pre-line;
+        position: relative;
+        transform: translateY(-20%);
     }
 }
 
@@ -1688,6 +1800,18 @@ button {
 
     .aboutLinks>div {
         margin-bottom: 30px;
+    }
+
+    .aboutApps>div:first-of-type {
+        display: grid;
+        
+        grid-template-areas: "a" "b" "c" "d";
+        justify-items: center;
+        align-items: start;
+    }
+
+    .aboutApps>div:first-of-type>span, .aboutApps>div:first-of-type>img{
+        margin: 10px;
     }
 
 }
