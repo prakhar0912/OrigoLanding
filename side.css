@@ -287,10 +287,14 @@ button {
     margin-bottom: 10px;
 }
 
-.loginRight>div:first-of-type > svg:first-of-type{
+.loginRight>div:first-of-type>svg:first-of-type {
+    opacity: 0;
+    pointer-events: none;
     justify-self: left;
     margin-left: 20px;
+    transition: opacity 0.5s ease-in-out;
 }
+
 
 
 .loginRight>div:first-of-type > svg{
@@ -394,7 +398,7 @@ button {
 }
 
 .otpContainer>div {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -1453,6 +1457,10 @@ button {
         width: 38px;
         font-size: 16px;
     }
+
+    .otpContainer > div{
+        margin-bottom: 40px;
+    }
 }
 
 @media(max-width: 711px) and (min-width: 665px){
@@ -1644,6 +1652,10 @@ button {
 
     .numberContainer>div:first-of-type {
         margin-bottom: 20px;
+    }
+
+    .otpContainer > div{
+        margin-bottom: 22px;
     }
 }
 

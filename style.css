@@ -397,7 +397,7 @@ button {
 }
 
 .otpContainer>div {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -1495,6 +1495,10 @@ button {
         width: 38px;
         font-size: 16px;
     }
+
+    .otpContainer > div{
+        margin-bottom: 40px;
+    }
 }
 
 @media(max-width: 711px) and (min-width: 665px){
@@ -1603,6 +1607,12 @@ button {
         padding: 20px;
         padding-bottom: 30px;
     }
+
+    .otpContainer > div > input{
+        height: 40px;
+        width: 38px;
+        margin-right: 10px;
+    }
 }
 
 @media(min-width: 665px) and (max-height: 508px) {
@@ -1698,6 +1708,10 @@ button {
 
     .numberContainer>div:first-of-type {
         margin-bottom: 20px;
+    }
+
+    .otpContainer > div{
+        margin-bottom: 22px;
     }
 }
 
