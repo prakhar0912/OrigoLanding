@@ -37,7 +37,7 @@ comMobBtn.addEventListener('click', () => {
 
 let overlay = document.querySelector('.loginOverlay')
 let regBtn = document.querySelectorAll('.register')
-let cross = document.querySelector('.loginRight > svg')
+let cross = document.querySelector('.loginRight > div > svg:last-of-type')
 
 regBtn.forEach((ele) => {
   ele.addEventListener('click', () => {
@@ -49,4 +49,21 @@ cross.addEventListener('click', () => {
   overlay.classList.remove('loginDisplay')
 })
 
+const clickEvent = (first,last) => {
+  if(first.value.length){
+    document.getElementById(last).focus();
+  }
+}
+
+let loginBtn = document.querySelector('.loginBtn')
+let loginContainer = document.querySelector('.loginRight')
+let loginBackBtn = document.querySelector(".loginRight > div > svg:first-of-type")
+
+loginBtn.addEventListener('click', () => {
+  loginContainer.classList.add('otpActive')
+})
+
+loginBackBtn.addEventListener('click', () => {
+  loginContainer.classList.remove('otpActive')
+})
 
