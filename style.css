@@ -748,6 +748,20 @@ button {
     font-size: 1.7rem;
 }
 
+.eGrid > div:first-of-type > div{
+    display: flex;
+    align-items: flex-end;
+}
+
+.eGrid > div:first-of-type > div > svg{
+    margin-right: 10px;
+}
+
+.eGrid img{
+    max-width: 33px;
+    margin-right: 10px;
+}
+
 .eGrid>div:last-of-type>button {
     height: 40px;
     width: 40px;
