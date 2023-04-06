@@ -37,7 +37,7 @@ comMobBtn.addEventListener('click', () => {
 
 let overlay = document.querySelector('.loginOverlay')
 let regBtn = document.querySelectorAll('.register')
-let cross = document.querySelector('.loginRight > div > svg:last-of-type')
+let cross = document.querySelector('.loginRight:not(.chatRight) > div > svg:last-of-type')
 
 regBtn.forEach((ele) => {
   ele.addEventListener('click', () => {
@@ -56,8 +56,8 @@ const clickEvent = (first,last) => {
 }
 
 let loginBtn = document.querySelector('.loginBtn')
-let loginContainer = document.querySelector('.loginRight')
-let loginBackBtn = document.querySelector(".loginRight > div > svg:first-of-type")
+let loginContainer = document.querySelector('.loginRight:not(.chatRight)')
+let loginBackBtn = document.querySelector(".loginRight:not(.chatRight) > div > svg:first-of-type")
 
 loginBtn.addEventListener('click', () => {
   loginContainer.classList.add('otpActive')
@@ -67,3 +67,16 @@ loginBackBtn.addEventListener('click', () => {
   loginContainer.classList.remove('otpActive')
 })
 
+let chatOverlay = document.querySelector('.chatOverlay')
+let callBtn = document.querySelectorAll('.call')
+let chatCross = document.querySelector('.chatRight > div > svg:last-of-type')
+
+callBtn.forEach((ele) => {
+  ele.addEventListener('click', () => {
+    chatOverlay.classList.add('chatDisplay')
+  })
+})
+
+chatCross.addEventListener('click', () => {
+  chatOverlay.classList.remove('chatDisplay')
+})

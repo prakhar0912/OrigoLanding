@@ -95,12 +95,15 @@ button {
     font-size: 16px;
 }
 
+
 .nav-links>a,
 .nav-links>div {
-    color: rgba(47, 47, 47, 1);
+    color: #2F2F2F;
     text-decoration: none;
     cursor: pointer;
     padding: 0 10px;
+    font-family: metropolis-medium, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
 
 .nav-links>a {
@@ -138,11 +141,11 @@ button {
     position: absolute;
     height: 0;
     overflow: hidden;
-    transition: all 1s ease;
+    transition: height 1s ease;
     background-color: transparent;
     text-align: center;
     width: 100%;
-
+    left: 0;
 }
 
 .nav-links>div>div>div {
@@ -154,21 +157,32 @@ button {
     border-radius: 8px;
     transition: color 0.3s ease;
     color: rgba(47, 47, 47, 1);
+    padding: 24px 0;
 }
 
 
 .nav-links>div>div>div>div:first-of-type {
-    border: 1px solid #ECECEC;
+    height: 1px;
+    background: #ECECEC;
     width: 70%;
     margin: 0 auto;
 }
 
 .nav-links>div>div>div>p {
     margin: 0;
-    padding: 15px 0;
+    padding: 0;
+    color: #2F2F2F;
 }
 
-.nav-links>div>div>div>p:hover {
+.nav-links>div>div>div>p:first-of-type{
+    padding-bottom: 16px;
+}
+
+.nav-links>div>div>div>p:last-of-type{
+    padding-top: 16px;
+}
+
+.nav-links>div>div>div>p:hover{
     color: #04B23D;
 }
 
@@ -207,7 +221,53 @@ button {
 
 /* Overlay */
 
-.loginOverlay {
+.chatContent{
+    position: relative;
+    padding-left: 20px;
+}
+
+.chatContent > p{
+    font-size: 14px;
+    color: #2F2F2F;
+    font-weight: 600;
+    margin: 24px 0;
+}
+
+.chatContent > div:first-of-type{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ECECEC;
+    padding: 8px;
+    width: fit-content;
+    color: #2F2F2F;
+    cursor: pointer;
+}
+
+.chatContent > div:first-of-type > svg{
+    margin-left: 40px;
+}
+
+.chatContent > div:last-of-type{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 36px 0;
+    margin-bottom: 20px;
+}
+
+.chatContent > div:last-of-type > img{
+    max-width: 140px;
+    margin-left: 24px;
+}
+
+
+
+
+
+.loginOverlay, .chatOverlay {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -221,7 +281,7 @@ button {
     pointer-events: none;
 }
 
-.loginDisplay {
+.loginDisplay, .chatDisplay {
     /* display: block; */
     opacity: 1;
     pointer-events: all;
@@ -351,6 +411,7 @@ button {
     outline: none;
     width: 100%;
     padding-left: 10px;
+    font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .numberContainer>button,
@@ -1625,6 +1686,11 @@ button {
     .loginLeft {
         border-radius: 0 0 12px 12px;
     }
+
+    .chatContent{
+        width: fit-content;
+        margin: 0 auto;
+    }
 }
 
 
@@ -1654,6 +1720,10 @@ button {
 
     .loginContainer {
         margin: 40px 5vw;
+    }
+
+    .chatOverlay > .loginContainer{
+        margin: 35px 5vw;
     }
 
     .numberContainer>div:first-of-type {
@@ -1755,6 +1825,19 @@ button {
     }
 }
 
+
+@media(max-width: 374px){
+    .chatOverlay > .loginContainer{
+        margin: 30px 5vw;
+    }
+
+    .chatContent > p{
+        margin: 18px 0;
+    }
+}
+
+
+
 @media(max-width: 360px) {
     .file {
         grid-template-areas: "a" "b" "c" "d";
@@ -1834,6 +1917,24 @@ button {
     .otpContainer>p:last-of-type>span:first-of-type{
         padding: 0;
     }
+
+    .chatContent > div:last-of-type{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .chatContent > div:last-of-type > img{
+        margin: 0;
+        margin-top: 16px;
+    }
+
+    .chatOverlay .loginLeft{
+        padding: 30px 40px;
+    }
+
+    .chatRight{
+        padding: 20px;
+    }
 }
 
 @media(max-width: 275px){
@@ -1848,5 +1949,12 @@ button {
 
     .processContainer>div{
         padding: 10px;
+    }
+}
+
+
+@media(max-width: 264px){
+    .chatContent > div:first-of-type > svg{
+        margin-left: 20px;
     }
 }
