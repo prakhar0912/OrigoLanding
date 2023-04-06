@@ -183,11 +183,11 @@ button {
     color: #2F2F2F;
 }
 
-.nav-links>div>div>div>p:first-of-type{
+.nav-links>div>div>div>p:first-of-type {
     padding-bottom: 16px;
 }
 
-.nav-links>div>div>div>p:last-of-type{
+.nav-links>div>div>div>p:last-of-type {
     padding-top: 16px;
 }
 
@@ -230,20 +230,104 @@ button {
 
 /* Overlay */
 
+.tcOverlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(47, 47, 47, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 3;
+    overflow: auto;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
 
-.chatContent{
+.tcDisplay {
+    /* display: block; */
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tcContainer {
+    position: relative;
+    margin: 100px 20vw;
+    margin-bottom: 0;
+    padding: 30px 50px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.tcContainer>svg {
+    display: block;
+    margin: 20px 0 0 auto;
+    cursor: pointer;
+}
+
+.tcContainer h3 {
+    color: #2F2F2F;
+    text-align: center;
+    padding: 0px 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tcContainer>div:first-of-type {
+    position: relative;
+    color: #2F2F2F;
+    font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-height: 250px;
+    overflow: auto;
+    margin: 30px 0 32px 0;
+    line-height: 20px;
+}
+
+
+
+.tcContainer > div:last-of-type{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 12px;
+
+    -webkit-box-shadow: inset 0px -200px 57px -3px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px -200px 57px -3px rgba(255, 255, 255, 1);
+
+    /* Disable click events */
+    pointer-events: none;
+    box-shadow: inset 0px -200px 57px -3px rgb(255, 255, 255);
+
+}
+
+.tcContainer > button{
+    position: relative;
+    display: block;
+    padding: 12px 100px;
+    font-size: 18px;
+    margin: 20px auto;
+    margin-top: 10px;
+    font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+
+.chatContent {
     position: relative;
     padding-left: 20px;
 }
 
-.chatContent > p{
+.chatContent>p {
     font-size: 14px;
     color: #2F2F2F;
     font-weight: 600;
     margin: 24px 0;
 }
 
-.chatContent > div:first-of-type{
+.chatContent>div:first-of-type {
     position: relative;
     display: flex;
     align-items: center;
@@ -255,11 +339,11 @@ button {
     cursor: pointer;
 }
 
-.chatContent > div:first-of-type > svg{
+.chatContent>div:first-of-type>svg {
     margin-left: 40px;
 }
 
-.chatContent > div:last-of-type{
+.chatContent>div:last-of-type {
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -268,12 +352,13 @@ button {
     margin-bottom: 20px;
 }
 
-.chatContent > div:last-of-type > img{
+.chatContent>div:last-of-type>img {
     max-width: 140px;
     margin-left: 24px;
 }
 
-.loginOverlay, .chatOverlay {
+.loginOverlay,
+.chatOverlay {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -287,7 +372,8 @@ button {
     pointer-events: none;
 }
 
-.loginDisplay, .chatDisplay {
+.loginDisplay,
+.chatDisplay {
     /* display: block; */
     opacity: 1;
     pointer-events: all;
@@ -419,6 +505,10 @@ button {
     font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.numberContainer > p > a{
+    cursor: pointer;
+}
+
 .numberContainer>button,
 .otpContainer>button {
     font-size: 18px;
@@ -483,7 +573,7 @@ button {
     outline: none;
 }
 
-.otpContainer > div > input:last-of-type{
+.otpContainer>div>input:last-of-type {
     margin-right: 0;
 }
 
@@ -607,7 +697,7 @@ button {
     padding-right: 5px;
     border-right: 1px #979797 solid;
     color: #B6B6B6;
-    
+
 }
 
 .section1Inner>div>div:first-of-type>input {
@@ -706,7 +796,7 @@ button {
     background: rgba(253, 233, 108, 0.15);
 }
 
-.eContent{
+.eContent {
     cursor: pointer;
 }
 
@@ -748,16 +838,16 @@ button {
     font-size: 1.7rem;
 }
 
-.eGrid > div:first-of-type > div{
+.eGrid>div:first-of-type>div {
     display: flex;
     align-items: flex-end;
 }
 
-.eGrid > div:first-of-type > div > svg{
+.eGrid>div:first-of-type>div>svg {
     margin-right: 10px;
 }
 
-.eGrid img{
+.eGrid img {
     max-width: 33px;
     margin-right: 10px;
 }
@@ -910,6 +1000,7 @@ button {
     font-size: 1.3rem;
     text-align: center;
 }
+
 /* 
 .glide__slide--active>.chain {
     transform: scale(1.1);
@@ -1292,6 +1383,11 @@ button {
         margin: 160px 15vw;
         margin-bottom: 0;
     }
+
+    .tcContainer{
+        margin: 100px 15vw;
+        margin-bottom: 0;
+    }
 }
 
 
@@ -1342,6 +1438,11 @@ button {
 
     .loginLeft>p:first-of-type {
         margin-top: 30px;
+    }
+
+    .tcContainer{
+        margin: 100px 10vw;
+        margin-bottom: 0;
     }
 }
 
@@ -1598,20 +1699,20 @@ button {
 }
 
 
-@media(max-width: 800px) and (min-width: 774px){
-    .otpContainer > div > input{
+@media(max-width: 800px) and (min-width: 774px) {
+    .otpContainer>div>input {
         height: 40px;
         width: 38px;
         font-size: 16px;
     }
 
-    .otpContainer > div{
+    .otpContainer>div {
         margin-bottom: 40px;
     }
 }
 
-@media(max-width: 711px) and (min-width: 665px){
-    .otpContainer > div > input{
+@media(max-width: 711px) and (min-width: 665px) {
+    .otpContainer>div>input {
         height: 40px;
         width: 38px;
         font-size: 16px;
@@ -1619,12 +1720,13 @@ button {
 }
 
 
-@media(max-width: 356px){
-    .otpContainer > div{
+@media(max-width: 356px) {
+    .otpContainer>div {
         justify-content: flex-start;
         align-items: center;
     }
-    .otpContainer > div > input{
+
+    .otpContainer>div>input {
         height: 40px;
         width: 38px;
         font-size: 16px;
@@ -1643,6 +1745,11 @@ button {
 @media(max-width: 775px) {
     .loginContainer {
         margin: 160px 5vw;
+        margin-bottom: 0;
+    }
+
+    .tcContainer{
+        margin: 100px 5vw;
         margin-bottom: 0;
     }
 }
@@ -1701,6 +1808,23 @@ button {
     }
 }
 
+@media(min-width: 665px) and (max-height: 650px){
+    .tcContainer{
+        margin: 90px 10vw;
+        margin-bottom: 0;
+    }
+
+    .tcContainer h3{
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .tcContainer>div:first-of-type{
+        max-height: 180px;
+    }
+}
+
+
 @media(min-width: 665px) and (max-height: 570px) {
     .loginContainer {
         margin: 100px 10vw;
@@ -1717,12 +1841,31 @@ button {
         padding-bottom: 30px;
     }
 
-    .otpContainer > div > input{
+    .otpContainer>div>input {
         height: 40px;
         width: 38px;
         margin-right: 10px;
     }
+
 }
+
+@media(min-width: 665px) and (max-height: 534px){
+    .tcContainer{
+        margin: 50px 10vw;
+        margin-bottom: 0;
+    }
+
+    .tcContainer h3{
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .tcContainer>div:first-of-type{
+        max-height: 180px;
+    }
+}
+
+
 
 @media(min-width: 665px) and (max-height: 508px) {
 
@@ -1743,6 +1886,28 @@ button {
 
     .loginRight>svg {
         margin: 10px 10px 0 auto;
+    }
+
+    .tcContainer{
+        margin: 50px 10vw;
+        margin-bottom: 0;
+    }
+
+    .tcContainer h3{
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .tcContainer > div:last-of-type{
+        box-shadow: none;
+    }
+
+    .tcContainer>div:first-of-type{
+        max-height: 100px;
+    }
+
+    .tcContainer > button{
+        margin: 0 auto;
     }
 }
 
@@ -1781,7 +1946,7 @@ button {
         border-radius: 0 0 12px 12px;
     }
 
-    .chatContent{
+    .chatContent {
         width: fit-content;
         margin: 0 auto;
         padding: 0;
@@ -1823,7 +1988,7 @@ button {
         margin: 40px 5vw;
     }
 
-    .chatOverlay > .loginContainer{
+    .chatOverlay>.loginContainer {
         margin: 35px 5vw;
     }
 
@@ -1831,7 +1996,7 @@ button {
         margin-bottom: 20px;
     }
 
-    .otpContainer > div{
+    .otpContainer>div {
         margin-bottom: 22px;
     }
 }
@@ -1933,13 +2098,23 @@ button {
         font-size: 14px;
     }
 
-    .section1Inner>div>div:first-of-type>input{
+    .section1Inner>div>div:first-of-type>input {
         font-size: 14px;
         width: 122px;
     }
 
-    .section1Inner>div>div:first-of-type>span{
+    .section1Inner>div>div:first-of-type>span {
         font-size: 14px;
+    }
+
+    .tcContainer{
+        margin: 100px 5vw;
+        margin-bottom: 0;
+        padding: 30px;
+    }
+
+    .tcContainer>svg{
+        margin: 0 0 0 auto;
     }
 }
 
@@ -1993,6 +2168,11 @@ button {
         padding: 60px 30px;
     }
 
+
+    .tcContainer > button{
+        padding: 12px 50px;
+    }
+
 }
 
 @media(max-width: 390px) {
@@ -2013,12 +2193,12 @@ button {
     }
 }
 
-@media(max-width: 374px){
-    .chatOverlay > .loginContainer{
+@media(max-width: 374px) {
+    .chatOverlay>.loginContainer {
         margin: 30px 5vw;
     }
 
-    .chatContent > p{
+    .chatContent>p {
         margin: 18px 0;
     }
 }
@@ -2062,18 +2242,38 @@ button {
 }
 
 
-@media(max-width: 350px){
-    .section1Inner>div>div:first-of-type>input{
+@media(max-width: 350px) {
+    .section1Inner>div>div:first-of-type>input {
         font-size: 12px;
         width: 106px;
     }
 
-    .section1Inner>div>div:first-of-type>span{
+    .section1Inner>div>div:first-of-type>span {
         font-size: 12px;
     }
 
-    .section1Inner>div>button{
+    .section1Inner>div>button {
         font-size: 14px;
+    }
+}
+
+
+@media(max-width: 324px){
+    .tcContainer > button{
+        padding: 12px 20px;
+    }
+
+    .tcContainer{
+        padding: 30px;
+    }
+
+    .tcContainer>svg {
+        display: block;
+        margin: 0px 0 20px auto;
+    }
+
+    .tcContainer h3{
+        padding: 20px;
     }
 }
 
@@ -2133,67 +2333,70 @@ button {
 
 }
 
-@media(max-width: 324px){
-    .section1Inner>div>div:first-of-type>span{
+@media(max-width: 324px) {
+    .section1Inner>div>div:first-of-type>span {
         border: none;
     }
-    .section1Inner>div>div:first-of-type{
+
+    .section1Inner>div>div:first-of-type {
         flex-direction: column;
     }
 }
 
-@media(max-width: 295px){
-    .otpContainer > div{
+@media(max-width: 295px) {
+    .otpContainer>div {
         justify-content: center;
         align-items: center;
     }
-    .otpContainer > div > input{
+
+    .otpContainer>div>input {
         height: 40px;
         width: 38px;
         font-size: 16px;
         margin-right: 5px;
     }
-    .otpContainer>p:last-of-type>span:first-of-type{
+
+    .otpContainer>p:last-of-type>span:first-of-type {
         padding: 0;
     }
 
-    .chatContent > div:last-of-type{
+    .chatContent>div:last-of-type {
         flex-direction: column;
         justify-content: flex-start;
     }
 
-    .chatContent > div:last-of-type > img{
+    .chatContent>div:last-of-type>img {
         margin: 0;
         margin-top: 16px;
     }
 
-    .loginLeft{
+    .loginLeft {
         padding: 30px 40px;
     }
 
-    .chatRight{
+    .chatRight {
         padding: 20px;
     }
 
 }
 
-@media(max-width: 275px){
-    .otpContainer > div{
+@media(max-width: 275px) {
+    .otpContainer>div {
         justify-content: center;
         align-items: center;
     }
 
-    .otpContainer > div > input{
+    .otpContainer>div>input {
         margin: 5px;
     }
 
-    .processContainer>div{
+    .processContainer>div {
         padding: 10px;
     }
 }
 
-@media(max-width: 264px){
-    .chatContent > div:first-of-type > svg{
+@media(max-width: 264px) {
+    .chatContent>div:first-of-type>svg {
         margin-left: 20px;
     }
 }

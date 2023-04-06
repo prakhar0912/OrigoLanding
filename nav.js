@@ -80,3 +80,21 @@ callBtn.forEach((ele) => {
 chatCross.addEventListener('click', () => {
   chatOverlay.classList.remove('chatDisplay')
 })
+
+
+let tcOverlay = document.querySelector('.tcOverlay')
+let tcBtn = document.querySelectorAll('.numberContainer > p > a')
+let tcCross = document.querySelectorAll('.tcContainer > svg, .tcContainer > button')
+
+tcBtn.forEach((ele) => {
+  ele.addEventListener('click', () => {
+    tcOverlay.classList.add('tcDisplay')
+  })
+})
+
+tcCross.forEach(ele => {
+  ele.addEventListener('click', () => {
+    tcOverlay.classList.remove('tcDisplay')
+  })
+})
+
