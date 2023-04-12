@@ -907,6 +907,7 @@ button {
     outline: none;
     width: 100%;
     padding-left: 10px;
+    font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .formContainer>select {
