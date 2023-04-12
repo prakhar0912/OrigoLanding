@@ -82,6 +82,10 @@ button {
     justify-content: space-evenly; */
 }
 
+.main-logo{
+    cursor: pointer;
+}
+
 .navInner>div {
     justify-self: center;
 }
@@ -337,10 +341,11 @@ button {
     width: fit-content;
     color: #2F2F2F;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .chatContent>div:first-of-type>svg {
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .chatContent>div:last-of-type {
@@ -353,7 +358,7 @@ button {
 }
 
 .chatContent>div:last-of-type>img {
-    max-width: 140px;
+    max-width: 120px;
     margin-left: 24px;
 }
 
@@ -841,6 +846,7 @@ button {
 .eGrid>div:first-of-type>div {
     display: flex;
     align-items: flex-end;
+    height: 50px;
 }
 
 .eGrid>div:first-of-type>div>svg {
@@ -1356,6 +1362,82 @@ button {
     font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 400;
 }
+
+@media(min-width: 2000px){
+    .loginContainer{
+        margin: 160px 27vw;
+    }
+}
+
+@media(min-width: 2400px){
+    .loginContainer{
+        margin: 160px 30vw;
+    }
+}
+
+
+@media(min-width: 2600px){
+
+    .loginContainer{
+        margin: 160px 32vw;
+    }
+
+    .section7Inner{
+        padding: 50px 15vw;
+    }
+}
+
+@media(min-width: 3000px){
+    .loginContainer{
+        margin: 160px 35vw;
+    }
+}
+
+@media(min-width: 3400px){
+    .loginContainer{
+        margin: 160px 37vw;
+    }
+}
+
+
+@media(min-width: 3800px){
+
+    .section7Inner{
+        padding: 50px 13vw;
+    }
+}
+
+@media(min-width: 5500px){
+    .loginContainer{
+        margin: 160px 41vw;
+    }
+}
+
+
+@media(min-width: 5700px){
+
+    .section7Inner{
+        padding: 50px 20vw;
+    }
+
+    .navInner{
+        padding: 30px 10vw;
+    }
+}
+
+@media(min-width: 7000px){
+
+    .loginContainer{
+        margin: 160px 43vw;
+    }
+
+    .section7Inner{
+        padding: 50px 20vw;
+    }
+}
+
+
+
 
 @media(max-width: 1533px) {
     .chain>span {

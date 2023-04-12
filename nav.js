@@ -1,6 +1,5 @@
 let checkbox = document.querySelector(".checkbox");
 let mobNav = document.querySelector('.mob-nav')
-console.log(mobNav)
 checkbox.addEventListener('change', function () {
   console.log('here')
   if (this.checked) {
@@ -26,13 +25,13 @@ comBtn.addEventListener('mouseout', () => {
 let comMobBtn = document.querySelector('.mob-nav > div')
 let index = 0
 comMobBtn.addEventListener('click', () => {
-  if(index % 2 == 0){
+  if (index % 2 == 0) {
     comMobBtn.classList.add('mobOpen')
   }
-  else{
+  else {
     comMobBtn.classList.remove('mobOpen')
   }
-  index+=1
+  index += 1
 })
 
 let overlay = document.querySelector('.loginOverlay')
@@ -49,10 +48,25 @@ cross.addEventListener('click', () => {
   overlay.classList.remove('loginDisplay')
 })
 
-const clickEvent = (first,last) => {
-  if(first.value.length){
-    document.getElementById(last).focus();
+const clickEvent = (first, last) => {
+  first.value = first.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+  if (first.value.length) {
+    if(last != '5th'){
+      document.getElementById(last).focus();
+    }
   }
+  if (first.value.length < 1) {
+    if(first.id == 'fourth'){
+      document.getElementById('third').focus();
+    }
+    else if(first.id == 'third'){
+      document.getElementById('sec').focus();
+    }
+    if(first.id == 'sec'){
+      document.getElementById('ist').focus();
+    }
+  }
+  // return true;
 }
 
 let loginBtn = document.querySelector('.loginBtn')

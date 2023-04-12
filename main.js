@@ -38,13 +38,21 @@ new Glide('.glide2', {
 new Glide('.glide3', {
     type: 'carousel',
     startAt: 0,
-    perView: 2,
+    perView: 4,
     focusAt: 'center',
     gap: 80,
     breakpoints: {
-        590: {
+        3160: {
+            perView: 3
+        },
+        2030:{
+            perView: 2
+        },
+
+        590:{
             perView: 1
         }
+
     }
     
 }).mount()

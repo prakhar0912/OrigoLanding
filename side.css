@@ -73,6 +73,10 @@ button {
     justify-content: space-evenly; */
 }
 
+.main-logo{
+    cursor: pointer;
+}
+
 .navInner>div {
     justify-self: center;
 }
@@ -334,10 +338,12 @@ button {
     width: fit-content;
     color: #2F2F2F;
     cursor: pointer;
+    font-weight: 18px;
+
 }
 
 .chatContent > div:first-of-type > svg{
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .chatContent > div:last-of-type{
@@ -350,7 +356,7 @@ button {
 }
 
 .chatContent > div:last-of-type > img{
-    max-width: 140px;
+    max-width: 120px;
     margin-left: 24px;
 }
 
@@ -853,6 +859,7 @@ button {
     margin: 0;
     margin-bottom: 36px;
     width: 100%;
+    font-family: metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .formContainer>input {
@@ -890,6 +897,8 @@ button {
 .formContainer>div:first-of-type>span {
     padding-right: 10px;
     border-right: 1px #979797 solid;
+    font-weight: 500;
+    font-family: metropolis-medium, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .formContainer>div:first-of-type>input {
@@ -1232,6 +1241,99 @@ button {
     font-family: Metropolis-light, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 400;
 }
+
+
+@media(min-height: 1371px){
+    .innerContainer{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .innerContainer > .section:last-of-type{
+        margin: auto 0 0 0;
+    }
+
+}
+
+
+@media(min-width: 2600px){
+    .aboutUs .section1, .eCash > .section1{
+        padding: 80px 15vw;
+    }
+
+    .eHedge > .section1 .comingSoonContainer{
+        padding: 44px 15vw;
+        padding-bottom: 150px;
+    }
+
+    .section7Inner{
+        padding: 50px 15vw;
+    }
+
+    .eCashLeft{
+        justify-self: right;
+        padding: 0;
+        padding-right: 250px;
+    }
+
+    .eCashRight{
+        justify-self: left;
+        padding: 0;
+        padding-left: 250px;
+    }
+}
+
+@media(min-width: 3800px){
+    .aboutUs .section1, .eCash > .section1{
+        padding: 80px 20vw;
+    }
+
+    .eHedge > .section1 .comingSoonContainer{
+        padding: 44px 20vw;
+        padding-bottom: 150px;
+    }
+
+    .section7Inner{
+        padding: 50px 20vw;
+    }
+}
+
+@media(min-width: 5700px){
+    .aboutUs .section1, .eCash > .section1{
+        padding: 80px 25vw;
+    }
+
+    .eHedge > .section1 .comingSoonContainer{
+        padding: 44px 25vw;
+        padding-bottom: 150px;
+    }
+
+    .section7Inner{
+        padding: 50px 25vw;
+    }
+
+    .navInner{
+        padding: 30px 10vw;
+    }
+}
+
+@media(min-width: 7000px){
+    .aboutUs .section1, .eCash > .section11{
+        padding: 80px 30vw;
+    }
+
+    .eHedge > .section1 .comingSoonContainer{
+        padding: 44px 30vw;
+        padding-bottom: 150px;
+    }
+
+    .section7Inner{
+        padding: 50px 30vw;
+    }
+}
+
+
 
 @media(max-width: 1533px) {
 
