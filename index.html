@@ -193,7 +193,7 @@
                             <p>Enter your Phone number</p>
                             <div>
                                 <span>+91</span>
-                                <input type="text" placeholder="Phone number">
+                                <input type="text" onkeypress="return onlyNumberKey(event)" maxlength="10" placeholder="Phone number">
                             </div>
                             <button class="loginBtn">Login/Register</button>
                             <p>By proceeding, I agree to Origo eMandi's <a>T&C</a></p>
@@ -2248,7 +2248,7 @@
                             <div>
                                 <h1>Get Started with Origo eMandi now</h1>
                                 <div>
-                                    <input type="text" placeholder="Enter your Phone number" onkeypress="return onlyNumberKey(event)">
+                                    <input type="text" placeholder="Enter your Phone number" onkeypress="return onlyNumberKey(event)" maxlength="10">
                                     <button>Lets go</button>
                                 </div>
                             </div>
