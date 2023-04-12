@@ -48,6 +48,15 @@ cross.addEventListener('click', () => {
   overlay.classList.remove('loginDisplay')
 })
 
+function onlyNumberKey(evt) {
+              
+  // Only ASCII character in that range allowed
+  var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+  if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+      return false;
+  return true;
+}
+
 const clickEvent = (first, last) => {
   first.value = first.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
   if (first.value.length) {
