@@ -1256,6 +1256,19 @@ button {
 
 }
 
+@media(min-width: 2000px){
+    .loginContainer{
+        margin: 160px 27vw;
+    }
+}
+
+@media(min-width: 2400px){
+    .loginContainer{
+        margin: 160px 30vw;
+    }
+}
+
+
 
 @media(min-width: 2600px){
     .aboutUs .section1, .eCash > .section1{
@@ -1282,6 +1295,22 @@ button {
         padding: 0;
         padding-left: 250px;
     }
+
+    .loginContainer{
+        margin: 160px 32vw;
+    }
+}
+
+@media(min-width: 3000px){
+    .loginContainer{
+        margin: 160px 35vw;
+    }
+}
+
+@media(min-width: 3400px){
+    .loginContainer{
+        margin: 160px 37vw;
+    }
 }
 
 @media(min-width: 3800px){
@@ -1298,6 +1327,13 @@ button {
         padding: 50px 20vw;
     }
 }
+
+@media(min-width: 5500px){
+    .loginContainer{
+        margin: 160px 41vw;
+    }
+}
+
 
 @media(min-width: 5700px){
     .aboutUs .section1, .eCash > .section1{
@@ -1331,6 +1367,11 @@ button {
     .section7Inner{
         padding: 50px 30vw;
     }
+
+    .loginContainer{
+        margin: 160px 43vw;
+    }
+
 }
 
 
