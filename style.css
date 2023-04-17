@@ -1474,10 +1474,14 @@ button {
 
 
 @media(max-width: 1200px) {
-    .section2Inner {
-        display: block;
+    
+    .eCash, .eHedge{
+        padding-left: 15vw;
     }
 
+    .eResearch, .eSpot{
+        padding-right: 15vw;
+    }
 
     .eGrid p {
         max-width: 90%;
@@ -1605,6 +1609,27 @@ button {
     }
 }
 
+
+@media(max-width: 976px){
+    .eCash, .eHedge{
+        padding-left: 13vw;
+    }
+
+    .eResearch, .eSpot{
+        padding-right: 13vw;
+    }
+}
+
+@media(max-width: 914px){
+    .eCash, .eHedge{
+        padding-left: 12vw;
+    }
+
+    .eResearch, .eSpot{
+        padding-right: 12vw;
+    }
+}
+
 .hamContainer {
     display: none;
 }
@@ -1614,6 +1639,11 @@ button {
 }
 
 @media(max-width: 903px) {
+
+    .section2Inner{
+        display: block;
+    }
+
     .register {
         display: none;
     }
@@ -2025,7 +2055,7 @@ button {
     .loginContainer {
         margin: 50px 5vw;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .loginLeft {
