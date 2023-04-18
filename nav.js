@@ -37,6 +37,11 @@ comMobBtn.addEventListener('click', () => {
 
 
 
+
+
+
+
+
 let overlay = document.querySelector('.loginOverlay')
 let regBtn = document.querySelectorAll('.register')
 let cross = document.querySelector('.loginRight:not(.chatRight) > div > svg:last-of-type')
@@ -48,14 +53,29 @@ let letsGoBtn = document.querySelector('.footerUpper>div:last-of-type>div>button
 let otpNumber = document.querySelector('.otpContainer > p:first-of-type > span')
 
 
+
+const openLoginContainerSpec = (elem, otp) => {
+  if(elem){
+    otpNumber.innerHTML = elem.value
+  }
+  overlay.classList.add('loginDisplay')
+  document.body.style.overflow = 'hidden'
+  if(otp){
+    loginContainer.classList.add('otpActive')
+  }
+}
+
+
+
 regBtn.forEach((ele) => {
   ele.addEventListener('click', () => {
     loginContainer.classList.remove('otpActive')
-    overlay.classList.add('loginDisplay')
+    openLoginContainerSpec(null, false)
   })
 })
 
 cross.addEventListener('click', () => {
+  document.body.style.overflow = 'auto'
   overlay.classList.remove('loginDisplay')
 })
 
@@ -65,9 +85,7 @@ letsGoBtn.addEventListener('click', (e) => {
   if (numberInpts[1].value.length != 10) {
     return
   }
-  otpNumber.innerHTML = numberInpts[1].value
-  overlay.classList.add('loginDisplay')
-  loginContainer.classList.add('otpActive')
+  openLoginContainerSpec(numberInpts[1], true)
 })
 
 numberInpts.forEach((ele) => {
@@ -77,9 +95,7 @@ numberInpts.forEach((ele) => {
     }
     let keyCode = e.code || e.keyCode
     if (keyCode == "Enter") {
-      otpNumber.innerHTML = ele.value
-      overlay.classList.add('loginDisplay')
-      loginContainer.classList.add('otpActive')
+      openLoginContainerSpec(ele, true)
     }
   })
 })
@@ -144,10 +160,12 @@ let chatCross = document.querySelector('.chatRight > div > svg:last-of-type')
 callBtn.forEach((ele) => {
   ele.addEventListener('click', () => {
     chatOverlay.classList.add('chatDisplay')
+    document.body.style.overflow = 'hidden'
   })
 })
 
 chatCross.addEventListener('click', () => {
+  document.body.style.overflow = 'auto'
   chatOverlay.classList.remove('chatDisplay')
 })
 
