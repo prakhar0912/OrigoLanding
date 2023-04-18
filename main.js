@@ -9,6 +9,8 @@ numberInpt.onkeypress = function (e) {
     }
     let keyCode = e.code || e.keyCode
     if (keyCode == "Enter") {
+        let otpNumber = document.querySelector('.otpContainer > p:first-of-type > span')
+        otpNumber.innerHTML = numberInpt.value
         let overlay = document.querySelector('.loginOverlay')
         let loginContainer = document.querySelector('.loginRight:not(.chatRight)')
         overlay.classList.add('loginDisplay')
@@ -20,6 +22,8 @@ numberBtn.addEventListener('click', (e) => {
     if (numberInpt.value.length != 10) {
         return
     }
+    let otpNumber = document.querySelector('.otpContainer > p:first-of-type > span')
+    otpNumber.innerHTML = numberInpt.value
     let overlay = document.querySelector('.loginOverlay')
     let loginContainer = document.querySelector('.loginRight:not(.chatRight)')
     overlay.classList.add('loginDisplay')
