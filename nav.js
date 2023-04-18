@@ -1,13 +1,11 @@
 let checkbox = document.querySelector(".checkbox");
 let mobNav = document.querySelector('.mob-nav')
 checkbox.addEventListener('change', function () {
-  console.log('here')
   if (this.checked) {
     mobNav.classList.add('show')
 
   } else {
     mobNav.classList.remove('show')
-
   }
 });
 
@@ -43,8 +41,16 @@ let overlay = document.querySelector('.loginOverlay')
 let regBtn = document.querySelectorAll('.register')
 let cross = document.querySelector('.loginRight:not(.chatRight) > div > svg:last-of-type')
 
+let numberInpts = document.querySelectorAll('.footerUpper>div:last-of-type>div>input, .numberContainer>div:first-of-type>input')
+
+let letsGoBtn = document.querySelector('.footerUpper>div:last-of-type>div>button')
+
+let otpNumber = document.querySelector('.otpContainer > p:first-of-type > span')
+
+
 regBtn.forEach((ele) => {
   ele.addEventListener('click', () => {
+    loginContainer.classList.remove('otpActive')
     overlay.classList.add('loginDisplay')
   })
 })
@@ -52,6 +58,33 @@ regBtn.forEach((ele) => {
 cross.addEventListener('click', () => {
   overlay.classList.remove('loginDisplay')
 })
+
+
+
+letsGoBtn.addEventListener('click', (e) => {
+  if (numberInpts[1].value.length != 10) {
+    return
+  }
+  otpNumber.innerHTML = numberInpts[1].value
+  overlay.classList.add('loginDisplay')
+  loginContainer.classList.add('otpActive')
+})
+
+numberInpts.forEach((ele) => {
+  ele.addEventListener('keypress', (e) => {
+    if (ele.value.length != 10) {
+      return
+    }
+    let keyCode = e.code || e.keyCode
+    if (keyCode == "Enter") {
+      otpNumber.innerHTML = ele.value
+      overlay.classList.add('loginDisplay')
+      loginContainer.classList.add('otpActive')
+    }
+  })
+})
+
+
 
 function onlyNumberKey(evt) {
 
@@ -83,31 +116,7 @@ const clickEvent = (first, last) => {
   // return true;
 }
 
-let numberInpts = document.querySelectorAll('.footerUpper>div:last-of-type>div>input, .numberContainer>div:first-of-type>input')
 
-let letsGoBtn = document.querySelector('.footerUpper>div:last-of-type>div>button')
-
-letsGoBtn.addEventListener('click', (e) => {
-  if (numberInpts[1].value.length != 10) {
-    return
-  }
-  overlay.classList.add('loginDisplay')
-  loginContainer.classList.add('otpActive')
-})
-
-numberInpts.forEach((ele) => {
-  ele.addEventListener('keypress', (e) => {
-    console.log('hehee')
-    if (ele.value.length != 10) {
-      return
-    }
-    let keyCode = e.code || e.keyCode
-    if (keyCode == "Enter") {
-      overlay.classList.add('loginDisplay')
-      loginContainer.classList.add('otpActive')
-    }
-  })
-})
 
 
 
@@ -120,6 +129,7 @@ loginBtn.addEventListener('click', () => {
   if (numberInpts[0].value.length != 10) {
     return
   }
+  otpNumber.innerHTML = numberInpts[0].value
   loginContainer.classList.add('otpActive')
 })
 
