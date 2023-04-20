@@ -55,12 +55,12 @@ let otpNumber = document.querySelector('.otpContainer > p:first-of-type > span')
 
 
 const openLoginContainerSpec = (elem, otp) => {
-  if(elem){
+  if (elem) {
     otpNumber.innerHTML = elem.value
   }
   overlay.classList.add('loginDisplay')
   document.body.style.overflow = 'hidden'
-  if(otp){
+  if (otp) {
     loginContainer.classList.add('otpActive')
   }
 }
@@ -184,4 +184,13 @@ tcCross.forEach(ele => {
   ele.addEventListener('click', () => {
     tcOverlay.classList.remove('tcDisplay')
   })
+})
+
+
+let callUsNumber = document.querySelector('.chatContent>div:first-of-type')
+
+callUsNumber.addEventListener('click', () => {
+  let elm = document.querySelector('.toaster')
+  var newone = elm.cloneNode(true);
+  elm.parentNode.replaceChild(newone, elm);
 })
