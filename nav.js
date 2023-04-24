@@ -194,3 +194,10 @@ callUsNumber.addEventListener('click', () => {
   var newone = elm.cloneNode(true);
   elm.parentNode.replaceChild(newone, elm);
 })
+
+let overlays = document.querySelectorAll('.tcOverlay, .loginOverlay, .chatOverlay')
+
+window.onload = () => {
+  console.log(overlays)
+  overlays.forEach(ele => ele.style.transition = "opacity 0.3s ease;")
+}

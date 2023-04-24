@@ -235,7 +235,6 @@ button {
     overflow: auto;
     /* display: none; */
     opacity: 0;
-    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -243,6 +242,7 @@ button {
     /* display: block; */
     opacity: 1;
     pointer-events: all;
+    transition: opacity 0.3s ease;
 }
 
 .tcContainer {
@@ -405,7 +405,6 @@ button {
     overflow: auto;
     /* display: none; */
     opacity: 0;
-    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -413,6 +412,7 @@ button {
     /* display: block; */
     opacity: 1;
     pointer-events: all;
+    transition: opacity 0.3s ease;
 }
 
 .loginContainer {

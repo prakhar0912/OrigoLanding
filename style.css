@@ -244,7 +244,6 @@ button {
     overflow: auto;
     /* display: none; */
     opacity: 0;
-    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -252,6 +251,8 @@ button {
     /* display: block; */
     opacity: 1;
     pointer-events: all;
+    transition: opacity 0.3s ease;
+
 }
 
 .tcContainer {
@@ -343,14 +344,16 @@ button {
 }
 
 
-@keyframes popup{
-    0%{
+@keyframes popup {
+    0% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
@@ -404,9 +407,7 @@ button {
     backdrop-filter: blur(3px);
     z-index: 2;
     overflow: auto;
-    /* display: none; */
     opacity: 0;
-    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -414,6 +415,7 @@ button {
 .chatDisplay {
     /* display: block; */
     opacity: 1;
+    transition: opacity 0.3s ease;
     pointer-events: all;
 }
 
@@ -1985,7 +1987,7 @@ button {
 
 @media(min-width: 665px) and (max-height: 570px) {
 
-    .toaster{
+    .toaster {
         top: 50px;
     }
 
@@ -2032,7 +2034,7 @@ button {
 
 @media(min-width: 665px) and (max-height: 508px) {
 
-    .toaster{
+    .toaster {
         top: initial;
         bottom: 50px;
     }
@@ -2105,7 +2107,7 @@ button {
 
 @media(max-width: 665px) {
 
-    .toaster{
+    .toaster {
         top: initial;
         bottom: 70px;
     }
@@ -2376,7 +2378,7 @@ button {
 
 @media(max-width: 374px) {
 
-    .toaster{
+    .toaster {
         font-size: 0.8rem;
         /* width: auto; */
     }
@@ -2582,8 +2584,8 @@ button {
     }
 }
 
-@media(max-width: 288px){
-    .toaster{
+@media(max-width: 288px) {
+    .toaster {
         font-size: 0.7rem;
         width: auto;
     }
@@ -2595,8 +2597,8 @@ button {
     }
 }
 
-@media(max-width: 231px){
-    .eGrid>div:last-of-type>button{
+@media(max-width: 231px) {
+    .eGrid>div:last-of-type>button {
         display: none;
     }
 }
